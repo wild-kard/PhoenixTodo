@@ -21,6 +21,8 @@ defmodule LiveTestWeb.Router do
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
     #the above is a standard query endpoint that will convert /hello/value where value becomes the the definition of ":messenger"
+    resources "/items", ItemController
+
   end
 
   # Other scopes may use custom stacks.
