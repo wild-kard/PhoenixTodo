@@ -18,6 +18,9 @@ defmodule LiveTestWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/hello", HelloController, :index
+    get "/hello/:messenger", HelloController, :show
+    #the above is a standard query endpoint that will convert /hello/value where value becomes the the definition of ":messenger"
   end
 
   # Other scopes may use custom stacks.
