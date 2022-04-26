@@ -15,7 +15,7 @@ defmodule LiveTestWeb.Router do
   end
 
   scope "/", LiveTestWeb do
-    pipe_through :browser
+    pipe_through :browser #this tells the router to use the default browser stack
 
     get "/", PageController, :index
     get "/hello", HelloController, :index
